@@ -17,7 +17,6 @@ class Users(Base):
     def exist(*args, **kwargs):
         return session.query(Users).filter(*args, **kwargs).first()
 
-
     @staticmethod
     def fromModel(user : UserModel):
         return Users(
